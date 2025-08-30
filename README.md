@@ -51,9 +51,17 @@ Check out the deployed application here: [VoteChain DApp](https://monadcollegevo
 
 ---
 
+## 📂 Repository Structure
 
+.
+├── contracts/ # Solidity smart contracts for elections
+├── frontend/ # React.js frontend application
+├── backend/ # Flask API for hybrid anomaly detection
+├── data/ # Sample datasets for ML training
+├── scripts/ # Deployment and helper scripts
+└── README.md # Project documentation
 
-
+---
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -66,4 +74,5 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
 
