@@ -51,15 +51,53 @@ Check out the deployed application here: [VoteChain DApp](https://monadcollegevo
 
 ---
 
-## 📂 Repository Structure
+---
 
-.
-├── contracts/ # Solidity smart contracts for elections
-├── frontend/ # React.js frontend application
-├── backend/ # Flask API for hybrid anomaly detection
-├── data/ # Sample datasets for ML training
-├── scripts/ # Deployment and helper scripts
-└── README.md # Project documentation
+## 💻 Getting Started (Local Setup)
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Rahul-chhajed/voting_monad_hackathon_2.git
+cd voting_monad_hackathon_2
+```
+
+### 2. Setup Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### 3. Deploy Smart Contracts
+```bash
+cd ../contracts
+npx hardhat compile
+npx hardhat deploy
+```
+
+### 4. Setup Backend & ML API
+
+```bash
+cd ../backend
+pip install -r requirements.txt
+python app.py
+```
+---
+## 📊 How It Works
+
+### 🗳️ Voting Process
+Users register and cast votes through the frontend. All votes are recorded on the blockchain using smart contracts.
+
+### 🕵️ Privacy Protection
+Voter identities are kept private using Semaphore ZKPs, ensuring no personal information is exposed.
+
+### 🔍 Fraud Detection
+A hybrid ML framework evaluates voting patterns to flag anomalies (e.g., multiple votes from the same wallet, abnormal vote bursts).
+
+### 📈 Insights & Reporting
+LIME explanations show top contributing features influencing anomaly detection, making the process transparent and interpretable.
 
 ---
 # React + Vite
@@ -74,5 +112,6 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
 
 
